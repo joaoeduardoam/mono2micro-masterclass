@@ -1,5 +1,6 @@
 package com.joaoeduardo.flight;
 
+import com.joaoeduardo.hotel.Hotel;
 import com.joaoeduardo.travelorder.TravelOrder;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -21,6 +22,13 @@ public class FlightResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Flight findById(@QueryParam("id") long id){
         return Flight.findById(id);
+    }
+
+    @GET
+    @Path("findByTravelOrderId")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Flight findByTravelOrderId(@QueryParam("travelOrderId") long travelOrderId){
+        return Flight.findByTravelOrderId(travelOrderId);
     }
 
     @POST

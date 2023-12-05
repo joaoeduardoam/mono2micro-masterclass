@@ -1,6 +1,7 @@
 package com.joaoeduardo.hotel;
 
 import com.joaoeduardo.flight.Flight;
+import com.joaoeduardo.travelorder.TravelOrder;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -21,6 +22,13 @@ public class HotelResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Hotel findById(@QueryParam("id") long id){
         return Hotel.findById(id);
+    }
+
+    @GET
+    @Path("findByTravelOrderId")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Hotel findByTravelOrderId(@QueryParam("travelOrderId") long travelOrderId){
+        return Hotel.findByTravelOrderId(travelOrderId);
     }
 
     @POST
