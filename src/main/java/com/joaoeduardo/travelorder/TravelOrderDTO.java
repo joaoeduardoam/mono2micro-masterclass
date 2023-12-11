@@ -17,6 +17,12 @@ public class TravelOrderDTO{
     private Integer nights;
 
     public static TravelOrderDTO of(TravelOrder order, Flight flight, Hotel hotel){
+        if (flight == null){
+            flight = new Flight();
+        }
+        if (hotel == null){
+            hotel = new Hotel();
+        }
         return new TravelOrderDTO(flight.fromAirport, flight.toAirport, hotel.nights);
     }
 
