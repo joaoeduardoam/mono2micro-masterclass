@@ -6,5 +6,7 @@
 -- alter sequence myentity_seq restart with 4;
 create sequence travelorder_sequence start with 1 increment by 1;
 INSERT INTO TravelOrder(id) VALUES (nextval('travelorder_sequence'));
-INSERT INTO TravelOrder(id) VALUES (nextval('travelorder_sequence'));
-INSERT INTO TravelOrder(id) VALUES (nextval('travelorder_sequence'));
+--INSERT INTO TravelOrder(id) VALUES (nextval('travelorder_sequence'));
+--INSERT INTO TravelOrder(id) VALUES (nextval('travelorder_sequence'));
+ALTER SEQUENCE travelorder_sequence RESTART WITH 10;
+

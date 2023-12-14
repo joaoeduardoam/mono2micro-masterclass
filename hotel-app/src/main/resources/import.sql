@@ -6,5 +6,6 @@
 -- alter sequence myentity_seq restart with 4;
 create sequence hotel_sequence start with 1 increment by 1;
 INSERT INTO Hotel(id,travelorderid,nights) VALUES (nextval('hotel_sequence'), 1, 11);
-INSERT INTO Hotel(id,travelorderid,nights) VALUES (nextval('hotel_sequence'), 2, 22);
-INSERT INTO Hotel(id,travelorderid,nights) VALUES (nextval('hotel_sequence'), 3, 33);
+--INSERT INTO Hotel(id,travelorderid,nights) VALUES (nextval('hotel_sequence'), 2, 22);
+--INSERT INTO Hotel(id,travelorderid,nights) VALUES (nextval('hotel_sequence'), 3, 33);
+ALTER SEQUENCE hotel_sequence RESTART WITH 10;

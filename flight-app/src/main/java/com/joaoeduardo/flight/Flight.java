@@ -22,4 +22,6 @@ public class Flight extends PanacheEntity {
         return find("travelOrderId", travelOrderId).firstResult();
     }
 
+
+
 }

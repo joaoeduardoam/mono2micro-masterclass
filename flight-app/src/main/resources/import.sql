@@ -7,5 +7,6 @@
 
 create sequence flight_sequence start with 1 increment by 1;
 INSERT INTO Flight(id,travelorderid,fromAirport,toAirport) VALUES (nextval('flight_sequence'), 1, 'THE', 'AAA');
-INSERT INTO Flight(id,travelorderid,fromAirport,toAirport) VALUES (nextval('flight_sequence'), 2, 'THE', 'BBB');
-INSERT INTO Flight(id,travelorderid,fromAirport,toAirport) VALUES (nextval('flight_sequence'), 3, 'THE', 'CCC');
+--INSERT INTO Flight(id,travelorderid,fromAirport,toAirport) VALUES (nextval('flight_sequence'), 2, 'THE', 'BBB');
+--INSERT INTO Flight(id,travelorderid,fromAirport,toAirport) VALUES (nextval('flight_sequence'), 3, 'THE', 'CCC');
+ALTER SEQUENCE flight_sequence RESTART WITH 10;
